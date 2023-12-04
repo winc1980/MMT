@@ -1,0 +1,21 @@
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    font-family: "Noto Sans", serif;
+}
+
+img { border: 0;}
+
+body, nav, section, header, main, footer, h1, h2, p, ul, li, dl, dt, dd, div {
+    margin: 0;
+    padding: 0;
+}
+
+body * {
+    font-family: "Noto Sans JP", sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 1.6rem;
+    margin: 0;
+}
