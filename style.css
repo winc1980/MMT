@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -18,4 +19,177 @@ body * {
     text-decoration: none;
     font-size: 1.6rem;
     margin: 0;
+}
+
+/* 活動の様子 */
+
+.gallery{
+    background: black;
+    padding: 100px 0 85px 0;
+}
+
+.gallery h2{
+    text-align: center;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 64px;
+    margin-bottom: 160px;
+}
+
+.swiper {
+    width: 100vw;
+    text-align: center;
+    height: 600px;
+}
+
+.swiper-slide img{
+    width: 45vw;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 0 13px;
+}
+
+.swiper-pagination-bullet {
+    background-color: #FFF;
+    height: 35px;
+    width: 35px;
+}
+
+/* 体験・入会希望 */
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-wrapper{
+    padding: 77px 0 99px 0;
+}
+
+.contact-wrapper > .flex-wrapper{
+    justify-content: space-between;
+}
+
+.flex-wrapper{
+    display: flex;
+}
+
+.form-title{
+    color: #000;
+    font-family: Inter;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 110px;
+}
+
+.sns-links-wrapper{
+    padding: 62px 37px 74px 36px;
+    background: black;
+    border-radius: 10px;
+}
+
+.sns-links-wrapper h3{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 40px;
+}
+
+.sns-link-wrap{
+    display: block;
+    background: #FFF;
+    padding: 37px 5px 37px 27px;
+    border-radius: 10px;
+}
+
+.sns-link-wrap:nth-of-type(1){
+    margin: 56px 0 35px 0;
+}
+
+.sns-link-wrap .flex-wrapper{
+    align-items: center;
+}
+
+.sns-link-wrap img{
+    width: 120px;
+    height: 120px;
+}
+
+.sns-link-wrap p{
+    color: #000;
+    font-family: Inter;
+    font-size: 40px;
+    margin-left: 13px;
+}
+
+form{
+    padding: 69px 0 0 5vw;
+}
+
+fieldset{
+    border: none;
+    padding: 0;
+}
+
+fieldset:nth-of-type(2){
+    padding: 21px 0 27px;
+}
+
+select{
+    width: 35vw;
+    height: 52px;
+    border-radius: 10px;
+    font-size: 32px;
+    color: #7A7777;
+}
+
+.changed{
+    color: black;
+}
+
+input{
+    width: 35vw;
+    height: 52px;
+    font-size: 32px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+::placeholder{
+    font-family: Inter;
+    font-size: 32px;
+}
+
+textarea{
+    resize: none;
+    padding: 16px;
+    font-size: 32px;
+    border-radius: 10px;
+    width: 100%;
+    height: 407px;
+}
+
+form > input{
+    width: 148px;
+    height: 68px;
+    background: black;
+    color: white;
+    border-radius: 20px;
+    margin: 16px 0 0 auto;
+    display: block;
+    font-size: 30px;
+}
+
+/* footer */
+footer{
+    height: 57px;
+    background: black;
+    display: grid;
+    place-items: center;
+}
+
+footer p{
+    color: white;
+    font-family: Inter;
+    font-size: 16px;
 }
