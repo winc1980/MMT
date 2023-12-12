@@ -1,7 +1,7 @@
 let mySwiper = new Swiper ('.swiper', {
   centeredSlides: true,
   loop: true,
-  slidesPerView: 1.5,
+  slidesPerView: 1.8,
   autoHeight: true,
 
   pagination: {
