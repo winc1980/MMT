@@ -65,6 +65,10 @@ body * {
     box-sizing: border-box;
 }
 
+li{
+    list-style: none;
+}
+
 .contact-wrapper{
     padding: 77px 0 99px 0;
 }
@@ -130,12 +134,7 @@ form{
     padding: 69px 0 0 60px;
 }
 
-fieldset{
-    border: none;
-    padding: 0;
-}
-
-fieldset:nth-of-type(2){
+form ul li:nth-of-type(2){
     padding: 21px 0 27px;
 }
 
@@ -173,7 +172,7 @@ textarea{
     height: 407px;
 }
 
-form > input{
+form ul li:last-child input{
     width: 148px;
     height: 68px;
     background: black;
