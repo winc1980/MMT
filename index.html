@@ -61,7 +61,7 @@
               </div>
             </a>
           </div>
-          <form action="" method="post">
+          <form action="" method="post" onsubmit="return false;">
             <ul>
               <li>
                 <select name="purpose" id="purpose">
@@ -72,13 +72,14 @@
                 </select>
               </li>
               <li>
-                <input type="text" name="email" id="email" placeholder="メールアドレス(必須)" required>
+                <input class="emailInput" type="text" name="email" id="email" required>
+                <p id="placeholder">メールアドレス<span>(必須)</span></p>
               </li>
               <li>
                 <textarea name="content" id="content" cols="22" rows="10" placeholder="内容"></textarea>
               </li>
               <li>
-                <input type="button" onclick="submit();" value="送信">
+                <input type="submit" value="送信">
               </li>
             </ul>
           </form>
@@ -91,6 +92,6 @@
       <p>Modern Music Troop©2023</p>
     </footer>
     <!-- フッターここまで -->
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

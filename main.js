@@ -5,10 +5,19 @@ let mySwiper = new Swiper ('.swiper', {
   autoHeight: true,
 
   pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-    clickable: true,
+    el: ".swiper-pagination",
+    type: "fraction",
   },
+
+  breakpoints: {
+    769: {
+      pagination: {
+        el: ".swiper-pagination",
+        type: 'bullets',
+        clickable: true,
+      },
+    }
+  }
 });
 
 const select = document.querySelector('select')
@@ -17,4 +26,13 @@ select.addEventListener('click', () => {
 })
 
 let emailInput = document.getElementById('email')
-let spanPlaceholder = emailInput.placeholder.slice(7)
+let inputPlaceholder = document.getElementById('placeholder')
+
+
+emailInput.addEventListener('input', () => {
+  if (emailInput.value.length < 1) {
+    inputPlaceholder.style.display = "block"
+  } else {
+    inputPlaceholder.style.display = "none"
+  }
+})
