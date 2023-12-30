@@ -100,7 +100,6 @@ ul li a p::after{
   display: block;
   width: 1.3vw;
   height: 1.3vw;
-  /* background: black; */
   border-left: 2px solid black;
   border-top: 2px solid black;
   transform: rotate(135deg) skew(10deg, 10deg);
