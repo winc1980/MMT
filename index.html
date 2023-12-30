@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MMT</title>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    >
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- ヘッダーここから -->
@@ -19,10 +25,73 @@
     <!-- アルバム紹介ーここから -->
     <!-- アルバム紹介ここまで -->
     <!-- 活動の様子ここから -->
+    <div class="gallery">
+      <h2>活動の様子</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="doc/images/Rectangle165.png"></div>
+          <div class="swiper-slide"><img src="doc/images/Rectangle165.png"></div>
+          <div class="swiper-slide"><img src="doc/images/Rectangle165.png"></div>
+          <div class="swiper-slide"><img src="doc/images/Rectangle165.png"></div>
+          <div class="swiper-slide"><img src="doc/images/Rectangle165.png"></div>
+          <div class="swiper-slide"><img src="doc/images/Rectangle165.png"></div>
+          <div class="swiper-slide"><img src="doc/images/Rectangle165.png"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
     <!-- 活動の様子ここまで -->
     <!-- 体験・入会希望ここから -->
+    <div class="container">
+      <div class="contact-wrapper">
+        <h2 class="form-title">体験・入会希望はコチラから！</h2>
+        <div class="flex-wrapper">
+          <div class="sns-links-wrapper">
+            <h3>SNSからでも<br>受け付けております！</h3>
+            <a class="sns-link-wrap" href="">
+              <div class="flex-wrapper">
+                <img src="doc/images/image30.png">
+                <p>@modern_music_t</p>
+              </div>
+            </a>
+            <a class="sns-link-wrap" href="">
+              <div class="flex-wrapper">
+                <img src="doc/images/image31.png">
+                <p>@modern_music_troop</p>
+              </div>
+            </a>
+          </div>
+          <form action="" method="post" onsubmit="return false;">
+            <ul>
+              <li>
+                <select name="purpose" id="purpose">
+                  <option hidden>選択</option>
+                  <option value="体験希望">体験希望</option>
+                  <option value="入会希望">入会希望</option>
+                  <option value="その他">その他</option>
+                </select>
+              </li>
+              <li>
+                <input class="emailInput" type="text" name="email" id="email" required>
+                <p id="placeholder">メールアドレス<span>(必須)</span></p>
+              </li>
+              <li>
+                <textarea name="content" id="content" cols="22" rows="10" placeholder="内容"></textarea>
+              </li>
+              <li>
+                <input type="submit" value="送信">
+              </li>
+            </ul>
+          </form>
+        </div>
+      </div>
+    </div>
     <!-- 体験・入会希望ここまで -->
     <!-- フッターここから -->
+    <footer>
+      <p>Modern Music Troop©2023</p>
+    </footer>
     <!-- フッターここまで -->
+    <script src="main.js"></script>
 </body>
 </html>
