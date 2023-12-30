@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  font-family: "Noto Sans", serif;
+}
+
+img { border: 0;}
+
+body, nav, section, header, main, footer, h1, h2, p, ul, li, dl, dt, dd, div {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body * {
+  font-family: "Noto Sans JP", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.container{
+  max-width: 1200px;
+  padding: 0 3%;
+  margin: 0 auto;
+}
+
+.flex-wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-wrapper:first-of-type{
+  align-items: center;
+  padding: 57px 0 58px;
+}
+
+.flex-wrapper:last-of-type{
+  padding: 0 0 64px;
+  position: relative;
+}
+
+.flex-wrapper h1{
+  color: #000;
+  font-family: Inter;
+  font-size: 64px;
+  font-weight: 400;
+}
+
+label{
+  padding: 16px 20px;
+  width: 350px;
+  height: 50px;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input:first-child {
+  border: none;
+  width: 280px;
+  outline: none;
+}
+
+input:last-child{
+  width: 20px;
+  height: 20px;
+}
+
+ul{
+  width: 30%;
+}
+
+ul li{
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+ul li a img{
+  max-width: 350px;
+  width: 100%;
+}
+
+ul li a p {
+  color: #000;
+  font-family: Inter;
+  font-size: clamp(16px, 2vw, 24px);
+  font-weight: 400;
+  position: relative;
+  width: fit-content;
+  line-height: 36px;
+}
+
+ul li a p::after{
+  content: "";
+  display: block;
+  width: 1.3vw;
+  height: 1.3vw;
+  /* background: black; */
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  transform: rotate(135deg) skew(10deg, 10deg);
+  position: absolute;
+  top: 10px;
+  right: -1.5em;
+}
+
+.hidden{
+  display: none;
+}
+
+ul li:nth-of-type(1),
+ul li:nth-of-type(2),
+ul li:nth-of-type(3),
+ul li:nth-of-type(4){
+  display: block;
+}
+
+ul li{
+  display: none;
+}
+
+.mask{
+  display: none;
+  position: absolute;
+  backdrop-filter: blur(60px);
+  width: 100%;
+  height: 100%;
+}
+
+.mask-show{
+  display: block;
+}
+
+.mask ul{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+.mask li {
+  height: fit-content;
+}
+
+.is-show{
+  display: block;
+}
+
+button{
+  display: block;
+  width: 180px;
+  height: 50px;
+  border: 1px solid #000;
+  background: #fff;
+  cursor: pointer;
+  margin: 0 auto 87px auto;
+}
+
+button::after{
+  content: "すべて表示";
+}
+
+.on-click::after{
+  content: "閉じる";
+}
+
+/* フッター */
+footer{
+  height: 57px;
+  background: black;
+  display: grid;
+  place-items: center;
+  margin: 0;
+}
+
+footer p{
+  color: white;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+
+  h1{
+    display: none;
+  }
+
+  label{
+    width: 297px;
+    padding: 10px;
+  }
+
+  .flex-wrapper:first-of-type{
+    justify-content: center;
+    padding: 20px 0;
+  }
+
+  .flex-wrapper:last-of-type{
+    display: block;
+  }
+
+  ul{
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .sp-hidden-list{
+    display: none;
+  }
+
+  .is-show{
+    display: block;
+  }
+
+
+  ul li{
+    display: grid;
+    place-items: center;
+  }
+
+  ul li a{
+    width: 100%;
+  }
+
+  ul li a img{
+    max-width: none;
+  }
+
+  ul li a p{
+    font-size: 24px;
+  }
+
+  ul li a p::after{
+    width: 20px;
+    height: 20px;
+    top: 6px;
+  }
+
+  footer{
+    height: 40px;
+  }
+}
