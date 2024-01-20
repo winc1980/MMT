@@ -1,0 +1,462 @@
+@font-face {
+    font-family: 'Jomhuria';
+    src: url('path/to/jomhuria.woff') format('woff'), /* WOFF フォーマット */
+         url('path/to/jomhuria.woff2') format('woff2'); /* WOFF2 フォーマット */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+.drawer_hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;/* 重なり順を一番上にする */
+    cursor: pointer;
+  }
+  
+  /* ハンバーガーメニューのアイコン */
+  .drawer_open span,
+  .drawer_open span:before,
+  .drawer_open span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 30px;
+    border-radius: 3px;
+    background: aliceblue;
+    transition: 0.5s;
+    position: absolute;
+  }
+  
+  /* 三本線の一番上の棒の位置調整 */
+  .drawer_open span:before {
+    bottom: 8px;
+  }
+  
+  /* 三本線の一番下の棒の位置調整 */
+  .drawer_open span:after {
+    top: 8px;
+  }
+  
+  /* アイコンがクリックされたら真ん中の線を透明にする */
+  #drawer_input:checked ~ .drawer_open span {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+  #drawer_input:checked ~ .drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  
+  #drawer_input:checked ~ .drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+    
+  /* メニューのデザイン*/
+  .nav_content {
+    width: 50%;
+    height: 30%;
+    position: fixed;
+    top: 0;
+    left: 100%; /* メニューを画面の外に飛ばす */
+    z-index: 99;
+    background: black;
+    transition: .5s;
+    color: aliceblue;
+    margin-left: 50%;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+  /* メニュー黒ポチを消す */
+  .nav_list {
+    list-style: none;
+  }
+  .nav_list a{
+    color: aliceblue;
+    margin-top: 20px;
+  }
+  .nav_item{
+    margin-top: 20px;
+  }
+  /* アイコンがクリックされたらメニューを表示 */
+  #drawer_input:checked ~ .nav_content {
+    left: 0;/* メニューを画面に入れる */
+  }
+
+
+li{
+    list-style: none;
+
+}
+.header_container{
+    padding-left: 27px;
+    padding-right: 27px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    height: 100px;
+}
+
+.header_container h1{
+    color: aliceblue;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Jomhuria',sans-serif;
+}
+
+.header_link{
+    display: flex;
+    color: aliceblue;
+
+}
+
+.header_link a{
+    line-height: 68px;
+    margin-left: 27px;
+    margin-top: 35px;
+    font-size: 24px;
+    text-decoration: none; /* リンクの下線をなくす */
+    transition: color 0.3s; /* 色が変わるときのアニメーション効果を追加 */
+}
+a:hover {
+    color:rgb(213, 19, 113); /* ホバー時に変更したい色を指定 */
+}
+/*ここからメインTOP*/
+.top_container_pc{
+    height: 788px;
+    display: flex;
+    padding-left: 54px;
+    padding-right: 54px;
+    justify-content: space-between;
+}
+.chara_img{
+    margin-top: 64px;
+    height: 600px;
+    width: 600px;
+    box-shadow: 15px 15px rgb(187, 185, 185);
+}
+.black_box{
+    margin-top: 126px;
+    width: 511px;
+    height: 496px;
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+}
+
+.black_box h2{
+    margin-top: 45px;
+    color: aliceblue;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+
+.black_box h1{
+    color: aliceblue;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.black_box p{
+    margin-top: 15px;
+    color: aliceblue;
+    font-size: 24px;
+}
+
+.white_lbox{
+    height: 60px;
+    background-color: aliceblue;
+    border-radius: 30px;
+}
+
+.white_lbox p{
+    line-height: 60px;
+    color: black;
+    text-align: center;
+}
+/*ここからメインミドル*/
+.middle_container_pc{
+    height: 720px;
+    padding-left: 64px;
+    padding-right: 64px;
+    background-color: black;
+
+}
+
+.middle_headline{
+    display: flex;
+}
+
+.middle_headline h1{
+    font-size: 40px;
+    color: aliceblue;
+    margin-top: 40px;
+}
+
+.white_box{
+    background-color: aliceblue;
+    width: 114px;
+    height: 35px;
+    margin-left: 25px;
+    margin-top: 55px;
+    text-align: center;
+}
+
+.white_box a{
+    line-height: 35px;
+}
+
+.albums{
+    display: flex;
+    justify-content: space-between;
+}
+
+.album{
+    background-color: aliceblue;
+    width: 343px;
+    height: 516px;
+    text-align: center;
+}
+
+.album_img{
+    width: 283px;
+    height: 272px;
+    margin-top: 32px;
+}
+
+.album h1{
+    font-size: 32px;
+}
+
+.album p{
+    font-size: 16px;
+    color: grey;
+}
+
+.black_lbox{
+    background-color: black;
+    width: 283px;
+    height: 50px;
+    border-radius: 30px;
+    margin: 0 auto;
+    color: aliceblue;
+}
+
+.black_lbox a{
+    /*注：aタグの方にcolor指定をつけるとホバーしなくなる*/
+    line-height: 50px;
+}
+/*ここからメインボトム*/
+.bottom_container_pc{
+    /* height: 1015px; */
+    padding-left: 54px;
+    /*padding-right: 54px;*/
+    padding-bottom: 40px;
+}
+
+.bottom_headline{
+    display: flex;
+}
+
+.bottom_headline h1{
+    font-size: 40px;
+    margin-top: 40px;
+}
+
+.small_box{
+    width: 114px;
+    height: 35px;
+    border: solid 3px #000000;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 25px;
+}
+
+.small_box a{
+    line-height: 35px;
+}
+
+/*曲*/
+.songs{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.song{
+    margin-top: 10px;
+    width: 233px;
+    height: 393px;
+    border: solid 3px #000000;
+    text-align: center;
+    margin-right: 40px;
+}
+
+.song_img{
+    margin-top: 15px;
+}
+
+.black_bbox{
+    background-color: black;
+    width: 204px;
+    height: 40px;
+    border-radius: 30px;
+    margin: 0 auto;
+    color: aliceblue;
+}
+
+.song a{
+    line-height: 40px;
+}
+
+#lower{
+    margin-top: 43px;
+}
+
+/*ここからフッター*/
+footer{
+    height: 57px;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+}
+
+footer p{
+    line-height: 57px;
+}
+
+/*ここからレスポンシブ関連*/
+.hamberger{
+    display: none;
+}
+#top_container_sp{
+    display: none;
+}
+#middle_container_sp{
+    display: none;
+        
+}
+.small_box_sp{
+    display: none;
+}
+.nav{
+    display: none;
+}
+/*ここからレスポンシブ*/
+@media screen and (max-width: 768px){
+    /*ヘッダー*/
+    .header_container h1{
+        font-size: 30px;
+        line-height: 100%;
+        margin: auto 0;
+    }
+        
+    
+    .header_link{
+        display: none;
+    }
+    .nav{
+        display: block;
+    }
+    .drawer_open{
+    margin-top: 20px;
+
+    }
+    /*メイントップ*/
+    .top_container_pc{
+        display: none;
+    }
+    #top_container_sp{
+        display: block;
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+    #black_box_sp{
+        background-color: #000000;
+        color: aliceblue;
+        border-radius: 20px;
+        padding-left: 27px;
+        padding-right: 27px;
+        padding-bottom: 23px;
+        padding-top: 20px;
+        margin-top: 20px;
+    }
+    #black_box_sp h2{
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+    #black_box_sp h1{
+        margin-top: 0px;
+        text-align: center;
+    }
+    .chara_img{
+        width: 240px;
+        height: 240px;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+    }
+    /*ミドル*/
+    .middle_container_pc{
+        display: none;
+    }
+    #middle_container_sp{
+        display: block;
+        padding-left: 13px;
+        padding-right: 13px;
+        margin: 0 auto;
+
+    }
+    .album{
+        border: solid 3px #000000;
+        margin: 7px auto;
+    }
+    .small_box{
+        display: none;
+    }
+    .small_box_sp{
+        line-height: 35px;
+        margin: 0 auto;
+        width: 114px;
+        height: 35px;
+        border: solid 3px #000000;
+        text-align: center;
+        margin-top: 25px;
+        display: block;
+    }
+    /*ボトム*/
+    /*.bottom_container_pc{
+        display: none;
+        
+    }*/
+    .bottom_container_pc{
+        /* height: 1015px; */
+        padding-left: 54px;
+        padding-right: 54px;
+    }
+    .songs{
+        display: flex;
+        justify-content: space-between;
+     
+    }
+    .song{
+        margin-right: 0px;
+    }
+}
