@@ -1,5 +1,134 @@
 @charset "UTF-8";
 
+
+.drawer_hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;/* 重なり順を一番上にする */
+    cursor: pointer;
+  }
+  
+  /* ハンバーガーメニューのアイコン */
+  .drawer_open span,
+  .drawer_open span:before,
+  .drawer_open span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 30px;
+    border-radius: 3px;
+    background: aliceblue;
+    transition: 0.5s;
+    position: absolute;
+  }
+  
+  /* 三本線の一番上の棒の位置調整 */
+  .drawer_open span:before {
+    bottom: 8px;
+  }
+  
+  /* 三本線の一番下の棒の位置調整 */
+  .drawer_open span:after {
+    top: 8px;
+  }
+  
+  /* アイコンがクリックされたら真ん中の線を透明にする */
+  #drawer_input:checked ~ .drawer_open span {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+  #drawer_input:checked ~ .drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  
+  #drawer_input:checked ~ .drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+    
+  /* メニューのデザイン*/
+  .nav_content {
+    width: 50%;
+    height: 30%;
+    position: fixed;
+    top: 0;
+    left: 100%; /* メニューを画面の外に飛ばす */
+    z-index: 99;
+    background: black;
+    transition: .5s;
+    color: aliceblue;
+    margin-left: 50%;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+  /* メニュー黒ポチを消す */
+  .nav_list {
+    list-style: none;
+  }
+  .nav_list a{
+    color: aliceblue;
+    margin-top: 20px;
+  }
+  .nav_item{
+    margin-top: 20px;
+  }
+  /* アイコンがクリックされたらメニューを表示 */
+  #drawer_input:checked ~ .nav_content {
+    left: 0;/* メニューを画面に入れる */
+  }
+
+
+li{
+    list-style: none;
+
+}
+.header_container{
+    padding-left: 27px;
+    padding-right: 27px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    height: 100px;
+}
+
+.header_container h1{
+    color: aliceblue;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Jomhuria',sans-serif;
+}
+
+.header_link{
+    display: flex;
+    color: aliceblue;
+
+}
+
+.header_link a{
+    line-height: 68px;
+    margin-left: 27px;
+    margin-top: 35px;
+    font-size: 24px;
+    text-decoration: none; /* リンクの下線をなくす */
+    transition: color 0.3s; /* 色が変わるときのアニメーション効果を追加 */
+}
+a:hover {
+    color:rgb(213, 19, 113); /* ホバー時に変更したい色を指定 */
+}
+
+
 body {
     margin: 0; /* body要素のマージンをリセット */
     padding:0;
@@ -101,6 +230,7 @@ p{
   
 
 .circle_room{
+  width: 100%;
     height: 708px;
     display: flex;
     flex-direction: row-reverse;
@@ -121,7 +251,106 @@ p{
     margin: 0 auto;
 }
 
+.room_sentence p{
+  font-size: 23px;
+}
+
 .room_img{
-    width: 450px;
-    height: 450px;
+    width: 500px;
+    height: 500px;
+}
+
+
+/*pc画面での非表示*/
+
+.header_container{
+  display: none;
+}
+.nav{
+  display: none;
+}
+.hamberger{
+  display: none;
+}
+#top_container_sp{
+  display: none;
+}
+@media screen and (max-width: 768px){
+
+   .top_container{
+    display: none;
+   }
+
+   .header_container{
+    display: flex;
+
+   }
+
+   .header_link{
+    display: none;
+  }
+    .nav{
+    display: block;
+  }
+  .drawer_open{
+  margin-top: 20px;
+
+  }
+
+  /*TOP*/
+  #top_container_sp{
+
+    display: block;
+    height: 1200px;
+    background-image: url(images/band_img_sp.png);
+    background-size: cover;
+    margin-top: 0px;
+    padding-top: 100px;
+  }
+  .top_sentence{
+    text-align: center;
+    
+  }
+  .top_sentence p{
+    margin-top: 0px;
+    line-height: 100%;
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  .top_sentence h1{
+    font-size: 50px;
+    margin-top: 10px;
+  }
+/*ロゴとコメント部分*/
+  .mmt_comment{
+    display: block;
+    height: 800px;
+    padding: 0 44px 0 44px;
+    margin-top: 100px;
+  }
+  .logo_img{
+    width: 100%;
+    margin-left: 0px;
+    
+  }
+
+  /*ボトム*/
+  .room_img{
+    width: 100%;
+  }
+  .circle_room{
+    display: block;
+    height: 1100px;
+  }
+.room_sentence h1{
+  margin-top: 30px;
+}
+
+  .room_sentence p{
+    margin-top: 20px;
+  }
+
+
+
+
 }
