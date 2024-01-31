@@ -458,5 +458,38 @@ footer p{
     }
     .song{
         margin-right: 0px;
+        width: 144px;
+        height: 236px;
     }
+    .song_img{
+        width: 126px;
+        height: 126px;
+    }
+    .black_bbox{
+        width: 131px;
+        height: 25px;
+    }
+
+    .song h1{
+        margin: 0 auto;
+        font-size: 16px;
+    }
+    .song p{
+        font-size: 12px;
+        margin: 10px auto;
+    }
+    .song a{
+        line-height: normal;
+    }
+    .bottom_container_pc{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .header_container h1{
+        font-size: 25px;
+    }
+
 }
