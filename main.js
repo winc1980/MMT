@@ -3,6 +3,7 @@ let mySwiper = new Swiper ('.swiper', {
   loop: true,
   slidesPerView: 1.8,
   autoHeight: true,
+  autoplay: true,
 
   pagination: {
     el: ".swiper-pagination",
