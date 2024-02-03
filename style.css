@@ -203,7 +203,6 @@ body * {
 
 .konpiarubamu_contents{
     width: 70%;
-    height: calc(90vw * 0.3);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -250,6 +249,100 @@ body * {
     color: white;
     text-decoration: underline;
     margin: 20px 0 0 0;
+}
+
+.releasepageseni{
+    width: 100vw;
+    margin: 0 auto;
+    font-size: 20px;
+    text-align: center;
+}
+
+.releasepageseni p{
+    width: 90vw;
+    margin: 30px auto;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.releasepageseni button{
+    width: 600px;
+    height: 80px;
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+}
+
+/* アーティスト紹介 */
+
+.artists {
+    width: 100vw;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.artists h1 {
+    width: 100vw;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.artists_contents {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.artists_contents_mobile {
+    display: none;
+}
+
+.artists_contents img {
+    width: 28vw;
+}
+
+.artists_contents h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.artists_contents h3 {
+    text-align: left;
+    width: 28vw;
+}
+
+.artist1 {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artist2 {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artist3 {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artists button {
+    width: 600px;
+    height: 80px;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    margin: 50px auto 0 auto;
 }
 
 
@@ -567,15 +660,83 @@ footer p{
     
     .konpiarubamu_wrapper button {
         width: 300px;
-        height: 100px;
         font-weight: 500;
         margin: 10px 0;
+        background-color: #fff;
     }
     
     .konpiarubamu_wrapper a {
         width: 300px;
         font-weight: 500;
         margin: 10px 0;
+    }
+
+    .releasepageseni {
+        width: 100vw;
+
+    }
+
+    .releasepageseni p{
+        width: 90vw;
+        font-size: 20px;
+    }
+
+    .releasepageseni button {
+        width: 90vw;
+        font-size: 25px;
+        height: 60px;
+    }
+
+    .artists {
+        width: 90vw;
+    }
+
+    .artists h1{
+        width: 100%;
+        font-size: 25px;
+    }
+
+    .artists_contents{
+        display: none;
+    }
+
+    .artists_contents_mobile{
+        display: block;
+    }
+
+    .artists_contents_mobile button {
+        width: 90vw;
+        height: 100px;
+        display: flex;
+        padding: 0;
+        border: none;
+        background-color: gray;
+        margin: 20px 0 0 0;
+    }
+
+    .artists_contents_mobile button img {
+        width: 100px !important;
+        height: 100px;
+        margin: 0;
+        background-color: blue;
+    }
+
+    .artists_contents_mobile button p {
+        width: calc(100% - 100px);
+        height: 100px;
+        text-align: center;
+        margin:  0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        color: black;
+    }
+
+    .artists .hokanoartists {
+        width: 90vw;
+        height: 60px;
+        font-size: 20px;
     }
 
 
