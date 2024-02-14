@@ -6,10 +6,14 @@
     font-style: normal;
   }
 
-
+body{
+    margin: 0;
+}
 .drawer_hidden {
   display: none;
 }
+
+
 
 /* ハンバーガーアイコンの設置スペース */
 .drawer_open {
@@ -104,11 +108,15 @@ li{
     padding-left: 27px;
     padding-right: 27px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     background-color: black;
     height: 100px;
+    position: fixed;
+    width: 100%;
 }
-
+.right{
+    margin-right: 40px;
+}
 .header_container h1{
     color: aliceblue;
     font-size: 40px;
@@ -141,6 +149,7 @@ a:hover {
     padding-left: 54px;
     padding-right: 54px;
     justify-content: space-between;
+    padding-top: 100px;
 }
 .chara_img{
     margin-top: 64px;
